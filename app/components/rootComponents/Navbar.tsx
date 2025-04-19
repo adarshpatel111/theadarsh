@@ -9,8 +9,6 @@ import {
 } from "lucide-react";
 import { MorphingNav } from "../ui/devsloka-ui/MorphingNav";
 import { Button } from "~/components/ui/button";
-import { Input } from "~/components/ui/input";
-import { Label } from "~/components/ui/label";
 import {
   Sheet,
   SheetClose,
@@ -21,9 +19,8 @@ import {
 } from "~/components/ui/sheet";
 import { Link, useLocation } from "react-router";
 
-const Navbar = () => {
+const Navbar : React.FC= () => {
   const pathRoute = useLocation();
-  //   const [activeTab, setActiveTab] = React.useState("home");
   const navItems = [
     { id: "/", label: "Home", icon: Home, href: "/" },
     { id: "/resume", label: "Resume", icon: BookOpen, href: "/resume" },
@@ -49,11 +46,8 @@ const Navbar = () => {
         <MorphingNav
           items={navItems}
           value={pathRoute.pathname}
-          //           onValueChange={setActiveTab}
           className="hidden lg:flex"
-          itemClassName="px-6 py-3"
           activeClass="bg-primary"
-          iconClass="h-6 w-6"
         />
         <Sheet>
           <SheetTrigger asChild>
