@@ -1,5 +1,4 @@
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
 import HeroSection from "~/components/Home/HeroSection";
 import { FloatingSkillsShowcase } from "~/components/ui/devsloka-ui/FloatingSkillsShowcase";
 import { FloatingDots } from "~/components/ui/devsloka-ui/FloatingDots";
