@@ -22,6 +22,7 @@ import { RiCss3Fill } from "react-icons/ri";
 import { FaReact } from "react-icons/fa";
 import { BiLogoMongodb } from "react-icons/bi";
 import { CgVercel } from "react-icons/cg";
+import { LinkPreview } from "./link-preview";
 
 interface FeatureItemProps {
   title: string;
@@ -29,6 +30,7 @@ interface FeatureItemProps {
   color: string;
   position: string;
   delay: number;
+  previewLink: string;
 }
 
 const featuresData: FeatureItemProps[] = [
@@ -38,6 +40,7 @@ const featuresData: FeatureItemProps[] = [
     color: "bg-background",
     position: " left-[15%] top-[35%] sm:left-[5%] md:top-[10%]",
     delay: 0.1,
+    previewLink: "https://developer.mozilla.org/en-US/docs/Web/HTML",
   },
   {
     title: "Redux",
@@ -45,6 +48,7 @@ const featuresData: FeatureItemProps[] = [
     color: "bg-background",
     position: "left-[15%] top-[35%] sm:left-[33%] md:top-[10%]",
     delay: 0.1,
+    previewLink: "https://redux.js.org/",
   },
   {
     title: "MongoDB",
@@ -52,6 +56,7 @@ const featuresData: FeatureItemProps[] = [
     color: "bg-background",
     position: "right-[15%] top-[35%] sm:right-[33%] md:top-[10%]",
     delay: 0.1,
+    previewLink: "https://www.mongodb.com/",
   },
   {
     title: "CSS3",
@@ -59,6 +64,7 @@ const featuresData: FeatureItemProps[] = [
     color: "bg-background",
     position: "right-[2%] top-[25%] sm:right-[5%] md:top-[10%]",
     delay: 0.1,
+    previewLink: "https://developer.mozilla.org/en-US/docs/Web/CSS",
   },
   {
     title: "Vite",
@@ -66,6 +72,7 @@ const featuresData: FeatureItemProps[] = [
     color: "bg-background",
     position: "left-[2%] top-[10%] sm:left-[20%] md:top-[25%]",
     delay: 0.2,
+    previewLink: "https://vitejs.dev/",
   },
   {
     title: "ExpressJs",
@@ -73,6 +80,7 @@ const featuresData: FeatureItemProps[] = [
     color: "bg-background",
     position: "right-[15%] top-[35%] sm:right-[20%] md:top-[25%]",
     delay: 0.2,
+    previewLink: "https://expressjs.com/",
   },
   {
     title: "Next JS",
@@ -80,6 +88,7 @@ const featuresData: FeatureItemProps[] = [
     color: "bg-background",
     position: "left-[10%] top-[30%] sm:left-[15%] md:top-[45%]",
     delay: 0.3,
+    previewLink: "https://nextjs.org/",
   },
   {
     title: "React-Router",
@@ -87,6 +96,7 @@ const featuresData: FeatureItemProps[] = [
     color: "bg-background",
     position: "left-[10%] top-[30%] sm:left-[0%] md:top-[35%]",
     delay: 0.3,
+    previewLink: "https://reactrouter.com/",
   },
   {
     title: "Vercel",
@@ -94,6 +104,7 @@ const featuresData: FeatureItemProps[] = [
     color: "bg-background",
     position: "right-[15%] bottom-[35%] sm:right-[15%] md:bottom-[45%]",
     delay: 0.3,
+    previewLink: "https://vercel.com/",
   },
   {
     title: "Remix",
@@ -102,6 +113,7 @@ const featuresData: FeatureItemProps[] = [
     position:
       "left-[50%] -translate-x-1/2 bottom-[5%] md:left-[40%] md:bottom-[10%]",
     delay: 0.3,
+    previewLink: "https://remix.run/",
   },
   {
     title: "Tailwind CSS",
@@ -109,6 +121,7 @@ const featuresData: FeatureItemProps[] = [
     color: "bg-background",
     position: "right-[10%] top-[35%] sm:right-[0%] md:top-[35%]",
     delay: 0.3,
+    previewLink: "https://tailwindcss.com/",
   },
   {
     title: "JavaScript",
@@ -116,6 +129,7 @@ const featuresData: FeatureItemProps[] = [
     color: "bg-background",
     position: "left-[2%] bottom-[25%] sm:left-[5%] md:bottom-[10%]",
     delay: 0.5,
+    previewLink: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
   },
   {
     title: "React",
@@ -123,6 +137,7 @@ const featuresData: FeatureItemProps[] = [
     color: "bg-background",
     position: "right-[2%] bottom-[20%] sm:right-[33%] md:bottom-[10%]",
     delay: 0.5,
+    previewLink: "https://reactjs.org/",
   },
   {
     title: "GitHub",
@@ -130,6 +145,7 @@ const featuresData: FeatureItemProps[] = [
     color: "bg-background",
     position: "left-[15%] bottom-[30%] sm:left-[20%] md:bottom-[25%]",
     delay: 0.4,
+    previewLink: "https://github.com/",
   },
   {
     title: "FireBase",
@@ -137,6 +153,7 @@ const featuresData: FeatureItemProps[] = [
     color: "bg-background",
     position: "right-[15%] bottom-[35%] sm:right-[20%] md:bottom-[25%]",
     delay: 0.4,
+    previewLink: "https://firebase.google.com/",
   },
   {
     title: "TypeScript",
@@ -144,6 +161,7 @@ const featuresData: FeatureItemProps[] = [
     color: "bg-background",
     position: "right-[15%] bottom-[35%] sm:right-[5%] md:bottom-[10%]",
     delay: 0.5,
+    previewLink: "https://www.typescriptlang.org/",
   },
 ];
 export function FloatingSkillsShowcase() {
@@ -191,6 +209,7 @@ function FeatureItem({
   color,
   position,
   delay,
+  previewLink,
 }: FeatureItemProps) {
   return (
     <motion.div
@@ -210,12 +229,12 @@ function FeatureItem({
             color
           )}
         >
-          {icon}
+          <LinkPreview url={previewLink} className="z-20">
+            {icon}
+          </LinkPreview>
         </div>
         <div>
-          <h4 className="font-medium text-xs md:text-sm">
-            {title}
-          </h4>
+          <h4 className="font-medium text-xs md:text-sm">{title}</h4>
         </div>
       </motion.div>
     </motion.div>
