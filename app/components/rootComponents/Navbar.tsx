@@ -24,7 +24,7 @@ const Navbar : React.FC= () => {
   const navItems = [
     { id: "/", label: "Home", icon: Home, href: "/" },
     { id: "/resume", label: "Resume", icon: BookOpen, href: "/resume" },
-    { id: "/about", label: "About", icon: CircleUser, href: "/about" },
+    // { id: "/about", label: "About", icon: CircleUser, href: "/about" },
     {
       id: "/projects",
       label: "Projects",
