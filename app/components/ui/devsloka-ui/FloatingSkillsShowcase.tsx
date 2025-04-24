@@ -38,7 +38,7 @@ const featuresData: FeatureItemProps[] = [
     title: "HTML5",
     icon: <SiHtml5 className="text-orange-500" />,
     color: "bg-background",
-    position: " left-[15%] top-[35%] sm:left-[5%] md:top-[10%]",
+    position: " left-[7%] top-[25%] sm:left-[5%] md:top-[10%]",
     delay: 0.1,
     previewLink: "https://developer.mozilla.org/en-US/docs/Web/HTML",
   },
@@ -46,7 +46,7 @@ const featuresData: FeatureItemProps[] = [
     title: "Redux",
     icon: <TbBrandRedux className="text-purple-600" />,
     color: "bg-background",
-    position: "left-[15%] top-[35%] sm:left-[33%] md:top-[10%]",
+    position: "left-[40%] top-[18%] sm:left-[33%] md:top-[10%]",
     delay: 0.1,
     previewLink: "https://redux.js.org/",
   },
@@ -54,7 +54,7 @@ const featuresData: FeatureItemProps[] = [
     title: "MongoDB",
     icon: <BiLogoMongodb className="text-green-600" />,
     color: "bg-background",
-    position: "right-[15%] top-[35%] sm:right-[33%] md:top-[10%]",
+    position: "right-[7%] top-[25%] sm:right-[33%] md:top-[10%]",
     delay: 0.1,
     previewLink: "https://www.mongodb.com/",
   },
@@ -62,7 +62,7 @@ const featuresData: FeatureItemProps[] = [
     title: "CSS3",
     icon: <RiCss3Fill className="text-blue-500" />,
     color: "bg-background",
-    position: "right-[2%] top-[25%] sm:right-[5%] md:top-[10%]",
+    position: "right-[20%] top-[5%] sm:right-[5%] md:top-[10%]",
     delay: 0.1,
     previewLink: "https://developer.mozilla.org/en-US/docs/Web/CSS",
   },
@@ -70,7 +70,7 @@ const featuresData: FeatureItemProps[] = [
     title: "Vite",
     icon: <SiVite className="text-purple-500" />,
     color: "bg-background",
-    position: "left-[2%] top-[10%] sm:left-[20%] md:top-[25%]",
+    position: "left-[5%] top-[45%] sm:left-[20%] md:top-[25%]",
     delay: 0.2,
     previewLink: "https://vitejs.dev/",
   },
@@ -78,7 +78,7 @@ const featuresData: FeatureItemProps[] = [
     title: "ExpressJs",
     icon: <SiExpress className="text-black dark:text-white" />,
     color: "bg-background",
-    position: "right-[15%] top-[35%] sm:right-[20%] md:top-[25%]",
+    position: "right-[5%] top-[45%] sm:right-[20%] md:top-[25%]",
     delay: 0.2,
     previewLink: "https://expressjs.com/",
   },
@@ -86,7 +86,7 @@ const featuresData: FeatureItemProps[] = [
     title: "Next JS",
     icon: <TbBrandNextjs className="text-black dark:text-white" />,
     color: "bg-background",
-    position: "left-[10%] top-[30%] sm:left-[15%] md:top-[45%]",
+    position: "left-[7%] top-[64%] sm:left-[15%] md:top-[45%]",
     delay: 0.3,
     previewLink: "https://nextjs.org/",
   },
@@ -94,7 +94,7 @@ const featuresData: FeatureItemProps[] = [
     title: "React-Router",
     icon: <SiReactrouter className="text-black dark:text-white" />,
     color: "bg-background",
-    position: "left-[10%] top-[30%] sm:left-[0%] md:top-[35%]",
+    position: "left-[20%] top-[5%] sm:left-[0%] md:top-[35%]",
     delay: 0.3,
     previewLink: "https://reactrouter.com/",
   },
@@ -102,7 +102,7 @@ const featuresData: FeatureItemProps[] = [
     title: "Vercel",
     icon: <CgVercel className="text-black dark:text-white" />,
     color: "bg-background",
-    position: "right-[15%] bottom-[35%] sm:right-[15%] md:bottom-[45%]",
+    position: "right-[10%] bottom-[25%] sm:right-[15%] md:bottom-[45%]",
     delay: 0.3,
     previewLink: "https://vercel.com/",
   },
@@ -111,7 +111,7 @@ const featuresData: FeatureItemProps[] = [
     icon: <SiRemix className="text-blue-600" />,
     color: "bg-background",
     position:
-      "left-[50%] -translate-x-1/2 bottom-[5%] md:left-[40%] md:bottom-[10%]",
+      "left-[0%] bottom-[0%] md:left-[40%] md:bottom-[10%]",
     delay: 0.3,
     previewLink: "https://remix.run/",
   },
@@ -119,7 +119,7 @@ const featuresData: FeatureItemProps[] = [
     title: "Tailwind CSS",
     icon: <SiTailwindcss className="text-cyan-400" />,
     color: "bg-background",
-    position: "right-[10%] top-[35%] sm:right-[0%] md:top-[35%]",
+    position: "right-[90%] top-[2%] sm:right-[0%] md:top-[35%]",
     delay: 0.3,
     previewLink: "https://tailwindcss.com/",
   },
@@ -127,7 +127,7 @@ const featuresData: FeatureItemProps[] = [
     title: "JavaScript",
     icon: <SiJavascript className="text-yellow-500" />,
     color: "bg-background",
-    position: "left-[2%] bottom-[25%] sm:left-[5%] md:bottom-[10%]",
+    position: "left-[20%] bottom-[10%] sm:left-[5%] md:bottom-[10%]",
     delay: 0.5,
     previewLink: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
   },
@@ -135,7 +135,7 @@ const featuresData: FeatureItemProps[] = [
     title: "React",
     icon: <FaReact className="text-blue-500" />,
     color: "bg-background",
-    position: "right-[2%] bottom-[20%] sm:right-[33%] md:bottom-[10%]",
+    position: "right-[0%] bottom-[0%] sm:right-[33%] md:bottom-[10%]",
     delay: 0.5,
     previewLink: "https://reactjs.org/",
   },
@@ -143,7 +143,7 @@ const featuresData: FeatureItemProps[] = [
     title: "GitHub",
     icon: <SiGithub className="text-black dark:text-white" />,
     color: "bg-background",
-    position: "left-[15%] bottom-[30%] sm:left-[20%] md:bottom-[25%]",
+    position: "left-[40%] bottom-[18%] sm:left-[20%] md:bottom-[25%]",
     delay: 0.4,
     previewLink: "https://github.com/",
   },
@@ -151,7 +151,7 @@ const featuresData: FeatureItemProps[] = [
     title: "FireBase",
     icon: <SiFirebase className="text-black dark:text-white" />,
     color: "bg-background",
-    position: "right-[15%] bottom-[35%] sm:right-[20%] md:bottom-[25%]",
+    position: "right-[0%] bottom-[100%] sm:right-[20%] md:bottom-[25%]",
     delay: 0.4,
     previewLink: "https://firebase.google.com/",
   },
@@ -159,7 +159,7 @@ const featuresData: FeatureItemProps[] = [
     title: "TypeScript",
     icon: <SiTypescript className="text-blue-600" />,
     color: "bg-background",
-    position: "right-[15%] bottom-[35%] sm:right-[5%] md:bottom-[10%]",
+    position: "right-[25%] bottom-[10%] sm:right-[5%] md:bottom-[10%]",
     delay: 0.5,
     previewLink: "https://www.typescriptlang.org/",
   },
@@ -174,7 +174,7 @@ export function FloatingSkillsShowcase() {
   return (
     <section
       ref={containerRef}
-      className="container w-full mx-auto py-12 md:py-24 lg:py-32 relative overflow-hidden"
+      className="container w-full mx-auto mt-5 md:mt-0 py-12 md:py-24 lg:py-32 relative overflow-hidden"
     >
       <div className="absolute inset-0 bg-[url('/placeholder.svg?height=20&width=20')] bg-[length:20px_20px] opacity-[0.02] dark:opacity-[0.03] pointer-events-none" />
 
@@ -219,24 +219,24 @@ function FeatureItem({
       viewport={{ once: true }}
       className={cn("absolute z-10", position)}
     >
-      <motion.div
-        whileHover={{ scale: 1.05 }}
-        className="flex items-center gap-3 bg-background/80 backdrop-blur-sm border border-border/50 p-3 rounded-lg shadow-lg max-w-[150px] md:max-w-[200px]"
-      >
-        <div
-          className={cn(
-            "w-8 h-8 rounded-md flex items-center justify-center text-white shrink-0 text-3xl",
-            color
-          )}
+      <LinkPreview url={previewLink} className="z-20">
+        <motion.div
+          whileHover={{ scale: 1.05 }}
+          className="flex items-center gap-0 md:gap-3 bg-background/80 backdrop-blur-sm border border-border/50 p-3 rounded-lg shadow-lg max-w-[150px] md:max-w-[200px]"
         >
-          <LinkPreview url={previewLink} className="z-20">
+          <div
+            className={cn(
+              "w-8 h-8 rounded-md flex items-center justify-center text-white shrink-0 text-3xl",
+              color
+            )}
+          >
             {icon}
-          </LinkPreview>
-        </div>
-        <div>
-          <h4 className="font-medium text-xs md:text-sm">{title}</h4>
-        </div>
-      </motion.div>
+          </div>
+          <div>
+            <h4 className="font-medium text-xs md:text-sm hidden md:flex">{title}</h4>
+          </div>
+        </motion.div>
+      </LinkPreview>
     </motion.div>
   );
 }
