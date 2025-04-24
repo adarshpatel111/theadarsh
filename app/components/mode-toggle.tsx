@@ -12,7 +12,6 @@ export function ModeToggle() {
   }, []);
 
   const handleToggle = () => {
-    console.log(theme, "theme");
     setTheme(theme === "dark" ? "light" : "dark");
   };
 
