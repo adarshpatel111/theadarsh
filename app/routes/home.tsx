@@ -3,6 +3,7 @@ import HeroSection from "~/components/Home/HeroSection";
 import { FloatingSkillsShowcase } from "~/components/ui/devsloka-ui/FloatingSkillsShowcase";
 import { FloatingDots } from "~/components/ui/devsloka-ui/FloatingDots";
 import { useTheme } from "~/components/theme-provider";
+import ProjectSection from "~/components/Home/ProjectSection";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -24,6 +25,7 @@ export default function Home() {
       />
       <HeroSection />
       <FloatingSkillsShowcase />
+      <ProjectSection/>
     </div>
   );
 }
