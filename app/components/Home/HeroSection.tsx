@@ -7,7 +7,7 @@ import { cn } from "~/lib/utils";
 const HeroSection = () => {
   return (
     <div>
-      <div className="w-full h-screen bg-background isolate overflow-hidden mt-20 md:mt-0">
+      <div className="w-full h-screen bg-background isolate overflow-hidden mt-20 lg:mt-10 xl:mt-10 2xl:mt-0">
         <Spotlight
           className="-top-40 left-0 md:-top-20 md:left-60"
           fill="white"
