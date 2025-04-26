@@ -14,34 +14,31 @@ import {
   Twitter,
   Youtube,
 } from "lucide-react";
-import { Button } from "~/components/ui/button";
-import { Input } from "~/components/ui/input";
 import { Link } from "react-router";
 
 export function Footer() {
   const footerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(footerRef, { once: false, amount: 0.3 });
-
-   const links = [
-     {
-       title: "Links",
-       items: [
-         { title: "Resume", href: "/resume" },
-         { title: "About", href: "/about" },
-         { title: "Projects", href: "/projects" },
-         { title: "Contact Me", href: "/contact-me" },
-       ],
-     },
-     {
-       title: "Company",
-       items: [
-         { title: "Resume", href: "/resume" },
-         { title: "About", href: "/about" },
-         { title: "Projects", href: "/projects" },
-         { title: "Contact Me", href: "/contact-me" },
-       ],
-     },
-   ];
+  const links = [
+    {
+      title: "Links",
+      items: [
+        { title: "Resume", href: "/resume" },
+        { title: "About", href: "/about" },
+        { title: "Projects", href: "/projects" },
+        { title: "Contact Me", href: "/contact-me" },
+      ],
+    },
+    {
+      title: "Company",
+      items: [
+        { title: "Resume", href: "/resume" },
+        { title: "About", href: "/about" },
+        { title: "Projects", href: "/projects" },
+        { title: "Contact Me", href: "/contact-me" },
+      ],
+    },
+  ];
 
   const socialLinks = [
     { icon: Twitter, label: "Twitter" },
@@ -153,8 +150,13 @@ export function Footer() {
                     delay: 0.5,
                   }}
                 />
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-2xl gradient-text">
+                  A
+                </div>
               </div>
-              <span className="text-2xl font-bold">TheAdarsh</span>
+              <span className="text-2xl font-semibold logo-span gradient-text">
+                TheAdarsh
+              </span>
             </div>
 
             <p className="text-muted-foreground max-w-md">
@@ -172,8 +174,8 @@ export function Footer() {
                     className="w-10 h-10 rounded-full flex items-center justify-center bg-muted hover:bg-primary/20 transition-colors"
                     whileHover={{
                       scale: 1.1,
-               //        backgroundColor: "var(--primary)",
-               //        color: "var(--primary-foreground)",
+                      //        backgroundColor: "var(--primary)",
+                      //        color: "var(--primary-foreground)",
                     }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -202,7 +204,10 @@ export function Footer() {
                 </h3>
                 <ul className="space-y-3">
                   {group.items.map((item) => (
-                    <motion.li key={item.href + item.title} whileHover={{ x: 5 }}>
+                    <motion.li
+                      key={item.href + item.title}
+                      whileHover={{ x: 5 }}
+                    >
                       <Link
                         to={item.href}
                         className="group flex items-center text-muted-foreground hover:text-foreground transition-colors"
@@ -261,33 +266,10 @@ export function Footer() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Get in Touch
+                <Link to={"/contact-me"}>Get in Touch</Link>
               </motion.button>
             </div>
           </motion.div>
-        </motion.div>
-
-        <motion.div
-          variants={itemVariants}
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          className="relative"
-        >
-          <div className="absolute left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
-          <div className="pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
-            <p>© {new Date().getFullYear()} FloatingUI. All rights reserved.</p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="hover:text-foreground transition-colors">
-                Privacy Policy
-              </a>
-              <a href="#" className="hover:text-foreground transition-colors">
-                Terms of Service
-              </a>
-              <a href="#" className="hover:text-foreground transition-colors">
-                Cookies
-              </a>
-            </div>
-          </div>
         </motion.div>
       </div>
     </footer>
