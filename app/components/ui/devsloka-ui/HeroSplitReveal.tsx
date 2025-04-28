@@ -223,7 +223,7 @@ export default function HeroSplitReveal() {
                     <ul className="list-disc list-inside pl-8 mt-2">
                       <li>HTML5, CSS3, Tailwind CSS, Bootstrap</li>
                       <li>JavaScript, ReactJS, Redux, React Router, Axios</li>
-                      <li>Material-UI, Chakra UI</li>
+                      <li>Material-UI, Shad-CN</li>
                       <li>
                         Node.js, ExpressJS, MongoDB, Microsoft SQL Server,
                         PostgreSQL
