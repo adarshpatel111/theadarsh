@@ -33,7 +33,6 @@ export function Footer() {
       label: "X",
       href: "https://x.com/AdarshPatel2211?t=xcDnfsKcCgMGvdey4CUPpw&s=09",
     },
-    { icon: Linkedin, label: "LinkedIn", href: "" },
     {
       icon: Github,
       label: "GitHub",
