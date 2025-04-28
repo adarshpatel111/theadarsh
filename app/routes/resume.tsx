@@ -9,37 +9,21 @@ const resume = () => {
 
   useEffect(() => setMounted(true), []);
 
-  // Animated particles component
-  const Particles = () => (
-    <div className="fixed inset-0 pointer-events-none">
-      {[...Array(30)].map((_, i) => (
-        <motion.div
-          key={i}
-          className="absolute w-1 h-1 rounded-full bg-primary/50"
-          initial={{
-            scale: 0,
-            x: Math.random() * window.innerWidth,
-            y: Math.random() * window.innerHeight,
-          }}
-          animate={{
-            scale: [0, 1, 0],
-            x: Math.random() * window.innerWidth,
-            y: Math.random() * window.innerHeight,
-          }}
-          transition={{
-            duration: 2 + Math.random() * 5,
-            repeat: Infinity,
-            repeatType: "reverse",
-          }}
-        />
-      ))}
-    </div>
-  );
+  const handleDownload = () => {
+    const fileUrl = "/public/adarsh's_Resume.pdf";
+    const fileName = "adarsh's_Resume.pdf";
+
+    // Create a temporary anchor element
+    const link = document.createElement("a");
+    link.href = fileUrl;
+    link.download = fileName;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <div className="min-h-screen bg-background mt-20">
-      <Particles />
-
       <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-primary origin-left z-50"
         style={{ scaleX }}
@@ -165,12 +149,15 @@ const resume = () => {
 
         {/* Download Button */}
         <motion.div
-          className="fixed bottom-8 right-8"
+          className="fixed bottom-8 right-8 z-50"
           initial={{ y: 100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5 }}
         >
-          <button className="flex items-center gap-2 px-6 py-3 rounded-full shadow-lg bg-background/20 border-2 border-primary text-primary">
+          <button
+            onClick={handleDownload}
+            className="flex items-center cursor-pointer gap-2 px-6 py-3 rounded-full shadow-lg bg-background/80 backdrop-blur-sm border-2 border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
+          >
             <FiDownloadCloud className="text-xl" />
             Download Resume
           </button>
