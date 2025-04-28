@@ -4,15 +4,12 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import {
   ArrowUpRight,
-  Facebook,
   Github,
-  Instagram,
   Linkedin,
   Mail,
   MapPin,
   Phone,
-  Twitter,
-  Youtube,
+  X,
 } from "lucide-react";
 import { Link } from "react-router";
 
@@ -24,16 +21,6 @@ export function Footer() {
       title: "Links",
       items: [
         { title: "Resume", href: "/resume" },
-        { title: "About", href: "/about" },
-        { title: "Projects", href: "/projects" },
-        { title: "Contact Me", href: "/contact-me" },
-      ],
-    },
-    {
-      title: "Company",
-      items: [
-        { title: "Resume", href: "/resume" },
-        { title: "About", href: "/about" },
         { title: "Projects", href: "/projects" },
         { title: "Contact Me", href: "/contact-me" },
       ],
@@ -41,18 +28,23 @@ export function Footer() {
   ];
 
   const socialLinks = [
-    { icon: Twitter, label: "Twitter" },
-    { icon: Instagram, label: "Instagram" },
-    { icon: Facebook, label: "Facebook" },
-    { icon: Linkedin, label: "LinkedIn" },
-    { icon: Github, label: "GitHub" },
-    { icon: Youtube, label: "YouTube" },
+    {
+      icon: X,
+      label: "X",
+      href: "https://x.com/AdarshPatel2211?t=xcDnfsKcCgMGvdey4CUPpw&s=09",
+    },
+    { icon: Linkedin, label: "LinkedIn", href: "" },
+    {
+      icon: Github,
+      label: "GitHub",
+      href: "https://github.com/adarshpatel111",
+    },
   ];
 
   const contactInfo = [
-    { icon: MapPin, text: "456 Floating Avenue, Design District, DD 20022" },
-    { icon: Phone, text: "+1 (555) 987-6543" },
-    { icon: Mail, text: "hello@floatingui.com" },
+    { icon: MapPin, text: "Vadodara,Gujarat" },
+    { icon: Phone, text: "+91 8320018439" },
+    { icon: Mail, text: "adarshpatel11012001@gmail.com" },
   ];
 
   const containerVariants = {
@@ -160,8 +152,8 @@ export function Footer() {
             </div>
 
             <p className="text-muted-foreground max-w-md">
-              Elevate your digital experience with our cutting-edge UI
-              components and design system. Built for the modern web.
+              Feel free to share the details, and we can work on improving or
+              enhancing your resume together.
             </p>
 
             <div className="space-y-4">
@@ -174,13 +166,13 @@ export function Footer() {
                     className="w-10 h-10 rounded-full flex items-center justify-center bg-muted hover:bg-primary/20 transition-colors"
                     whileHover={{
                       scale: 1.1,
-                      //        backgroundColor: "var(--primary)",
-                      //        color: "var(--primary-foreground)",
                     }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    <social.icon className="w-5 h-5" />
-                    <span className="sr-only">{social.label}</span>
+                    <Link to={social.href}>
+                      <social.icon className="w-5 h-5" />
+                      <span className="sr-only">{social.label}</span>
+                    </Link>
                   </motion.a>
                 ))}
               </div>
@@ -189,7 +181,7 @@ export function Footer() {
 
           <motion.div
             variants={itemVariants}
-            className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-8"
+            className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-1 gap-8"
           >
             {links.map((group) => (
               <div key={group.title} className="space-y-4">
@@ -233,7 +225,7 @@ export function Footer() {
             className="lg:col-span-3 space-y-6"
           >
             <h3 className="text-lg font-semibold relative">
-              <span className="relative z-10">Contact Us</span>
+              <span className="relative z-10">Contact Me</span>
               <motion.span
                 className="absolute bottom-0 left-0 h-1 bg-primary/30 rounded-full"
                 initial={{ width: 0 }}
