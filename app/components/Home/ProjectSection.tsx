@@ -2,12 +2,7 @@ import React from "react";
 import { projectsData } from "utils/data";
 import {
   ExternalLink,
-  Github,
-  Code,
-  Layers,
-  Palette,
-  Server,
-  Smartphone,
+  MoveRight,
 } from "lucide-react";
 import { Card } from "~/components/ui/card";
 import { Button } from "~/components/ui/button";
@@ -89,6 +84,15 @@ const ProjectSection = () => {
                   </div>
 
                   <div className="mt-auto flex gap-2">
+                    <Button size="sm" variant="default" asChild>
+                      <Link
+                        to={`/projects/${project.id}`}
+                        rel="noopener noreferrer"
+                      >
+                        <MoveRight className="mr-1 h-4 w-4" />
+                        More
+                      </Link>
+                    </Button>
                     {project.liveUrl && (
                       <Button size="sm" variant="default" asChild>
                         <a
@@ -98,18 +102,6 @@ const ProjectSection = () => {
                         >
                           <ExternalLink className="h-4 w-4 mr-1" />
                           Live
-                        </a>
-                      </Button>
-                    )}
-                    {project.githubUrl && (
-                      <Button size="sm" variant="outline" asChild>
-                        <a
-                          href={project.githubUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <Github className="h-4 w-4 mr-1" />
-                          Code
                         </a>
                       </Button>
                     )}
