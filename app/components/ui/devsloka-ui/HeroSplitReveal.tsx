@@ -6,25 +6,12 @@ import { Button } from "~/components/ui/button";
 import { useState, useEffect, useRef } from "react";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { TextEffect } from "./TextEffect";
+import { Link } from "react-router";
 
 export default function HeroSplitReveal() {
   const { theme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
-
-  {
-    /* If you want to use scroll-based animations , uncomment the code below */
-  }
-
-  // Scroll-based animations
-  //   const { scrollYProgress } = useScroll({
-  //     target: containerRef,
-  //     offset: ["start start", "end start"],
-  //   });
-
-  //   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-  //   const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.9]);
-  //   const y = useTransform(scrollYProgress, [0, 0.5], [0, 100]);
 
   useEffect(() => {
     setMounted(true);
@@ -36,7 +23,6 @@ export default function HeroSplitReveal() {
     <motion.div
       ref={containerRef}
       className="container relative w-full mx-auto overflow-hidden"
-      //   style={{ opacity, scale, y }}
     >
       {/* Background Pattern */}
       <div className="absolute inset-0">
@@ -125,8 +111,11 @@ export default function HeroSplitReveal() {
               transition={{ duration: 0.5, delay: 0.5 }}
               className="max-w-xl mb-8 text-sm lg:text-xl text-muted-foreground"
             >
-              Create stunning interfaces with our modern component library
-              featuring split-screen layouts and scroll-based reveal animations.
+              I skilled Front-End Developer with expertise in React.js, Redux,
+              and Material-UI.I have experience building user-centric websites
+              like RGAV.IN and bsre.in. I'm proficient in modern web
+              technologies and passionate about delivering high-quality,
+              responsive solutions.
             </motion.p>
 
             <motion.div
@@ -139,17 +128,11 @@ export default function HeroSplitReveal() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Button size="lg" className="gap-2 text-lg">
-                  Get Started <ArrowRight className="w-4 h-4" />
-                </Button>
-              </motion.div>
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Button size="lg" variant="outline" className="text-lg">
-                  Documentation
-                </Button>
+                <Link to={"/contact-me"}>
+                  <Button size="lg" className="gap-2 text-lg cursor-pointer">
+                    Contact Me <ArrowRight className="w-4 h-4" />
+                  </Button>
+                </Link>
               </motion.div>
             </motion.div>
 
@@ -161,9 +144,9 @@ export default function HeroSplitReveal() {
               className="grid grid-cols-3 gap-4 mt-16"
             >
               {[
-                { label: "Components", value: "150+" },
-                { label: "Downloads", value: "10k+" },
-                { label: "Satisfaction", value: "99%" },
+                { label: "Project", value: "15+" },
+                { label: "Experience", value: "2 Years" },
+                { label: "Skills", value: "14+" },
               ].map((stat, index) => (
                 <motion.div
                   key={index}
@@ -212,50 +195,45 @@ export default function HeroSplitReveal() {
                     <div className="w-3 h-3 rounded-full bg-green-500" />
                   </div>
                   <div className="px-2 py-1 text-xs rounded bg-muted">
-                    component.tsx
+                    adarsh.tsx
                   </div>
                 </div>
+                <div className="font-mono text-sm text-muted-foreground p-4">
+                  <div className="mb-6">
+                    <div className="text-purple-500">
+                      <span className="text-green-500">import</span>{" "}
+                      <span className="text-blue-400">React</span>{" "}
+                      <span className="text-green-500">from</span>{" "}
+                      <span className="text-orange-400">'react'</span>
+                      <span className="text-white">;</span>
+                    </div>
 
-                <div className="font-mono text-sm">
-                  <div className="text-muted-foreground">
-                    <span className="text-green-500">import</span> {"{"}
-                    <span className="text-blue-500"> motion </span>
-                    {"}"} <span className="text-green-500">from</span>{" "}
-                    <span className="text-orange-400">framer-motion&apos;</span>
+                    <div className="text-purple-500 mt-2">
+                      <span className="text-green-500">export const</span>{" "}
+                      <span className="text-yellow-500">
+                        TheAdarshPortfolio
+                      </span>{" "}
+                      <span className="text-white">=</span>{" "}
+                      <span>() =&gt; {"{"}</span>
+                    </div>
+
+                    <div className="mt-4 text-foreground pl-4">
+                      <span className="text-green-500">// Main Skills</span>
+                    </div>
+                    <ul className="list-disc list-inside pl-8 mt-2">
+                      <li>HTML5, CSS3, Tailwind CSS, Bootstrap</li>
+                      <li>JavaScript, ReactJS, Redux, React Router, Axios</li>
+                      <li>Material-UI, Chakra UI</li>
+                      <li>
+                        Node.js, ExpressJS, MongoDB, Microsoft SQL Server,
+                        PostgreSQL
+                      </li>
+                      <li>Socket.io, Firebase</li>
+                      <li>GitHub, Vercel, Render</li>
+                    </ul>
+
+                    <div className="text-purple-500">{"}"}</div>
                   </div>
-                  <div className="mt-2 text-muted-foreground">
-                    <span className="text-purple-500">
-                      export default function
-                    </span>{" "}
-                    <span className="text-blue-500">Component</span>() {"{"}
-                  </div>
-                  <div className="mt-1 text-muted-foreground pl-4">
-                    <span className="text-purple-500">return</span> (
-                  </div>
-                  <div className="mt-1 text-muted-foreground pl-8">
-                    &lt;<span className="text-blue-500">motion.div</span>
-                  </div>
-                  <div className="mt-1 text-muted-foreground pl-12">
-                    <span className="text-green-500">initial</span>={"{"}
-                    {"{"} <span className="text-orange-400">opacity: 0</span>{" "}
-                    {"}"}
-                    {"}"}
-                  </div>
-                  <div className="mt-1 text-muted-foreground pl-12">
-                    <span className="text-green-500">animate</span>={"{"}
-                    {"{"} <span className="text-orange-400">opacity: 1</span>{" "}
-                    {"}"}
-                    {"}"}
-                  </div>
-                  <div className="mt-1 text-muted-foreground pl-8">&gt;</div>
-                  <div className="mt-1 text-muted-foreground pl-12">
-                    <span className="text-foreground">Your content here</span>
-                  </div>
-                  <div className="mt-1 text-muted-foreground pl-8">
-                    &lt;/<span className="text-blue-500">motion.div</span>&gt;
-                  </div>
-                  <div className="mt-1 text-muted-foreground pl-4">)</div>
-                  <div className="mt-1 text-muted-foreground">{"}"}</div>
                 </div>
               </motion.div>
 
