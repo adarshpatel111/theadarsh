@@ -7,8 +7,8 @@ import ProjectSection from "~/components/Home/ProjectSection";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "The Adarsh" },
+    { name: "description", content: "Welcome to Adarsh's PortFolio!" },
   ];
 }
 
