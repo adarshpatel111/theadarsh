@@ -152,8 +152,8 @@ export function Footer() {
             </div>
 
             <p className="text-muted-foreground max-w-md">
-              Feel free to share the details, and we can work on improving or
-              enhancing your resume together.
+              Feel free to reach me, and we can work on improving or
+              enhancing your Website or web-apps.
             </p>
 
             <div className="space-y-4">
