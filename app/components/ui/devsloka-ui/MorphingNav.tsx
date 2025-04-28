@@ -43,7 +43,7 @@ export const MorphingNav = ({
   }, [value]);
 
   const handleItemClick = (id: string) => {
-    if (!value) setInternalValue(id); // Only update internal state if uncontrolled
+    if (!value) setInternalValue(id); 
     onValueChange?.(id);
   };
 
