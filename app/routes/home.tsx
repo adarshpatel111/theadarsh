@@ -9,6 +9,7 @@ export function meta({}: Route.MetaArgs) {
   return [
     { title: "The Adarsh" },
     { name: "description", content: "Welcome to Adarsh's PortFolio!" },
+    {favicon:"/favicon.ico"},
   ];
 }
 
