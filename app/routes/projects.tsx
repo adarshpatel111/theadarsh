@@ -1,6 +1,13 @@
 import React from "react";
 import ProjectCards from "~/components/Projects/project-cards";
+import type { Route } from "../+types/root";
 
+export function meta({}: Route.MetaArgs) {
+  return [
+    { title: "The Adarsh || Projects" },
+    { name: "description", content: "Welcome to Adarsh's PortFolio!" },
+  ];
+}
 const Projects: React.FC = () => {
   return (
     <div className="container w-full mx-auto mt-35">
