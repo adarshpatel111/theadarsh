@@ -5,7 +5,14 @@ import { sendEmail } from "utils/email";
 import { useFetcher } from "react-router";
 import { useEffect, useRef } from "react";
 import { toast } from "sonner";
+import type { Route } from "../+types/root";
 
+export function meta({}: Route.MetaArgs) {
+  return [
+    { title: "The Adarsh || Contact Me" },
+    { name: "description", content: "Welcome to Adarsh's PortFolio!" },
+  ];
+}
 export async function action({ request }) {
   const body = await request.formData();
   const name = body.get("name");
