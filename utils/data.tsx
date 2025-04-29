@@ -215,9 +215,9 @@ export const projectsData = [
       "Implemented Stripe with proper security measures",
     ],
     screenshots: [
-      "/public/rgav1.png",
-      "/public/rgav-admin1.png",
-      "/public/rgav-admin1.png",
+      "/rgav1.png",
+      "/rgav-admin1.png",
+      "/rgav-admin1.png",
     ],
   },
   {
@@ -271,7 +271,7 @@ export const projectsData = [
       "Integrated Leaflet.js for interactive maps",
       "Implemented lazy loading for images",
     ],
-    screenshots: ["/public/bsre1.png"],
+    screenshots: ["/bsre1.png"],
   },
   {
     id: "3",
@@ -320,7 +320,7 @@ export const projectsData = [
       "Used hardware-accelerated animations",
       "Implemented robust form validation",
     ],
-    screenshots: ["/public/bsit1.png"],
+    screenshots: ["/bsit1.png"],
   },
   {
     id: "4",
@@ -372,10 +372,10 @@ export const projectsData = [
       "Created wizard component with validation",
     ],
     screenshots: [
-      "/public/bssp1.png",
-      "/public/bssp2.png",
-      "/public/bssp3.png",
-      "/public/bssp4.png",
+      "/bssp1.png",
+      "/bssp2.png",
+      "/bssp3.png",
+      "/bssp4.png",
     ],
   },
   {
@@ -505,9 +505,9 @@ export const projectsData = [
       "Added offline support with sync-on-reconnect",
     ],
     screenshots: [
-      "/public/collabbros1.png",
-      "/public/collabbros2.png",
-      "/public/collabbros3.png",
+      "/collabbros1.png",
+      "/collabbros2.png",
+      "/collabbros3.png",
     ],
   },
 ];
