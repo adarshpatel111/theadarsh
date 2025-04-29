@@ -7,7 +7,14 @@ import { Badge } from "~/components/ui/badge";
 import { Button } from "~/components/ui/button";
 import { cn } from "~/lib/utils";
 import { projectsData } from "utils/data";
+import type { Route } from "../+types/root";
 
+export function meta({}: Route.MetaArgs) {
+  return [
+    { title: "The Adarsh || Project Details" },
+    { name: "description", content: "Welcome to Adarsh's PortFolio!" },
+  ];
+}
 export default function ProjectDetail() {
   const { id } = useParams<{ id: string }>();
 
