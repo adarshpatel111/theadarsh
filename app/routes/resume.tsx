@@ -1,7 +1,14 @@
 import { motion, useScroll, useSpring, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { FiDownloadCloud, FiMail, FiSmartphone } from "react-icons/fi";
+import type { Route } from "../+types/root";
 
+export function meta({}: Route.MetaArgs) {
+  return [
+    { title: "The Adarsh || Resume" },
+    { name: "description", content: "Welcome to Adarsh's PortFolio!" },
+  ];
+}
 const resume = () => {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
@@ -10,7 +17,7 @@ const resume = () => {
   useEffect(() => setMounted(true), []);
 
   const handleDownload = () => {
-    const fileUrl = "/public/adarsh's_Resume.pdf";
+    const fileUrl = "/adarsh's_Resume.pdf";
     const fileName = "adarsh's_Resume.pdf";
 
     // Create a temporary anchor element
