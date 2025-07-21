@@ -2,6 +2,9 @@ import { motion, useScroll, useSpring, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { FiDownloadCloud, FiMail, FiSmartphone } from "react-icons/fi";
 import type { Route } from "../+types/root";
+import { Button } from "~/components/ui/button";
+import { Link } from "react-router";
+import { ArrowRight } from "lucide-react";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -123,7 +126,7 @@ const resume = () => {
             ))}
             <p>
               This experience section highlights the key technologies and skills
-              relevant to a junior front-end developer role, showcasing
+              relevant to a junior MERM STACK developer role, showcasing
               proficiency in React.js, Axios, React Router,Redux, Material-UI,
               hooks, and IAM integration
             </p>
@@ -151,6 +154,15 @@ const resume = () => {
                 </div>
               </Card>
             ))}
+          </div>
+
+          {/* Centered Beautiful Button */}
+          <div className="flex justify-center mt-10">
+            <Link to={"/projects"}>
+              <Button size="lg" className="gap-2 text-lg cursor-pointer">
+                View All Projects <ArrowRight className="w-4 h-4" />
+              </Button>
+            </Link>
           </div>
         </Section>
 
@@ -238,19 +250,20 @@ const skills = [
 
 const experiences = [
   {
-    position: "Front End Developer",
+    position: "MERN STACK Developer",
     company: "Bapa Sitaram Group of companies",
     duration: "05/2023 - Present",
     points: [
-      "Developed and maintained user-friendly web-based software utilizing React.js, Axios, React Router, Redux ,and Material-UI.",
-      "Implemented responsive designs and ensured cross-browser compatibility to enhance user experience.",
-      "Leveraged functional components and React hooks to streamline development processes and improve code readability.",
-      "Integrated Identity and Access Management (IAM) solutions to ensure secure user authentication and authorization.",
-      "Collaborated with cross-functional teams to gather requirements, troubleshoot issues, and deliver high-quality solutions within project timelines.",
-      "Actively participated in code reviews and provided constructive feedback to enhance team efficiency and code quality.",
-      "Stayed updated with the latest front-end development trends and technologies to continually improve skills and contribute innovative solutions.",
-      "Developed and launched rgva.in, RGAV admin, an Ayurveda e-commerce website,BSIT, enhancing user experience through intuitive design and robust functionality.",
-      "Created bsre.in, focusing on user-centric design and seamless navigation, resulting in improved customer engagementand satisfaction.",
+      "Developed and maintained full-stack web applications using the MERN stack (MongoDB, Express.js, React.js, Node.js), enhancing performance and scalability.",
+      "Built interactive and responsive UIs with React.js, Material-UI, Redux, Axios, and React Router, ensuring smooth client-side functionality and cross-browser compatibility.",
+      "Leveraged functional components and React Hooks to optimize code reusability, maintainability, and improve development speed.",
+      "Implemented secure authentication and authorization flows using Identity and Access Management (IAM) solutions, JWT, and session handling on both frontend and backend.",
+      "Integrated RESTful APIs and MongoDB queries for dynamic data handling, CRUD operations, and real-time updates across applications.",
+      "Collaborated with cross-functional teams including designers, testers, and backend developers to gather requirements, debug issues, and meet project deadlines efficiently.",
+      "Participated in code reviews and version control (Git) practices to maintain high-quality, consistent code and support team productivity.",
+      "Built and deployed RGVA.in and RGAV Admin, a robust Ayurveda e-commerce platform with admin panel features, focusing on seamless user journeys and operational efficiency.",
+      "Designed and developed BSRE.in, a user-centric business site with enhanced navigation and performance, leading to higher customer engagement.",
+      "Continuously explored new trends in the JavaScript ecosystem to adopt best practices and propose innovative technical solutions.",
     ],
   },
 ];
