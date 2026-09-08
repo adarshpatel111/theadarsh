@@ -6,7 +6,7 @@ import { Button } from "~/components/ui/button";
 import { Link } from "react-router";
 import { ArrowRight } from "lucide-react";
 
-export function meta({}: Route.MetaArgs) {
+export function meta({ }: Route.MetaArgs) {
   return [
     { title: "The Adarsh || Resume" },
     { name: "description", content: "Welcome to Adarsh's PortFolio!" },
@@ -185,9 +185,12 @@ const resume = () => {
     </div>
   );
 };
-
+type SectionProps = {
+  title: string;
+  children: React.ReactNode;
+};
 // Reusable components
-const Section = ({ title, children }) => (
+const Section = ({ title, children }: SectionProps) => (
   <motion.section
     className="mb-20"
     initial={{ opacity: 0, y: 20 }}
@@ -198,8 +201,11 @@ const Section = ({ title, children }) => (
     {children}
   </motion.section>
 );
-
-const Card = ({ children, index }) => (
+type CardProps = {
+  children: React.ReactNode;
+  index: number;
+};
+const Card = ({ children, index }: CardProps) => (
   <motion.div
     className="p-6 rounded-xl bg-secondary"
     initial={{ y: 50, opacity: 0 }}

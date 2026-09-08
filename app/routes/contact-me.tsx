@@ -1,19 +1,19 @@
 import { motion } from "framer-motion";
 import { FiMail, FiPhone, FiMapPin, FiSend } from "react-icons/fi";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { sendEmail } from "utils/email";
+import { sendEmail } from "~/utils/email";
 import { useFetcher } from "react-router";
 import { useEffect, useRef } from "react";
 import { toast } from "sonner";
 import type { Route } from "../+types/root";
 
-export function meta({}: Route.MetaArgs) {
+export function meta({ }: Route.MetaArgs) {
   return [
     { title: "The Adarsh || Contact Me" },
     { name: "description", content: "Welcome to Adarsh's PortFolio!" },
   ];
 }
-export async function action({ request }) {
+export async function action({ request }: Route.ActionArgs) {
   const body = await request.formData();
   const name = body.get("name");
   const email = body.get("email");
@@ -35,18 +35,32 @@ export async function action({ request }) {
 }
 export default function ContactPage() {
   const fetcher = useFetcher();
-  const nameRef = useRef(null);
-  const emailRef = useRef(null);
-  const subjectRef = useRef(null);
-  const messageRef = useRef(null);
+  const nameRef = useRef<HTMLInputElement>(null);
+  const emailRef = useRef<HTMLInputElement>(null);
+  const subjectRef = useRef<HTMLInputElement>(null);
+  const messageRef = useRef<HTMLTextAreaElement>(null);
+
   useEffect(() => {
     if (fetcher.state === "idle") {
       if (fetcher.data?.message) {
         // Reset form fields on success
-        nameRef.current.value = "";
-        emailRef.current.value = "";
-        subjectRef.current.value = "";
-        messageRef.current.value = "";
+        if (nameRef.current) {
+          nameRef.current.value = "";
+        }
+
+        if (emailRef.current) {
+          emailRef.current.value = "";
+        }
+
+        if (subjectRef.current) {
+          subjectRef.current.value = "";
+        }
+
+        if (messageRef.current) {
+          messageRef.current.value = "";
+        }
+
+
 
         toast(fetcher.data.message);
       } else if (fetcher.data?.error) {
@@ -55,7 +69,7 @@ export default function ContactPage() {
       }
     }
   }, [fetcher.state, fetcher.data]);
-  const isSubmitting = fetcher.state === "idle";
+  const isSubmitting = fetcher.state === "submitting";
   return (
     <div className="min-h-screen bg-background py-20 px-4 sm:px-6 lg:px-8 mt-20">
       <div className="max-w-6xl mx-auto">

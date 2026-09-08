@@ -10,7 +10,7 @@ import { Button } from "~/components/ui/button";
 import { Badge } from "~/components/ui/badge";
 import { cn } from "~/lib/utils";
 import { Link } from "react-router";
-import { projectsData } from "utils/data";
+import { projectsData } from "~/utils/data";
 
 interface ProjectCardProps {
   id: string;

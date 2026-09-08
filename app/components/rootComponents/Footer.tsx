@@ -38,6 +38,11 @@ export function Footer() {
       label: "GitHub",
       href: "https://github.com/adarshpatel111",
     },
+    {
+      icon: Linkedin,
+      label: "Linkedin",
+      href: "https://www.linkedin.com/in/adarsh-patel-111/",
+    },
   ];
 
   const contactInfo = [

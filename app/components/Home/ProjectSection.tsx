@@ -1,5 +1,4 @@
-import React from "react";
-import { projectsData } from "utils/data";
+import { projectsData } from "~/utils/data";
 import {
   ExternalLink,
   MoveRight,

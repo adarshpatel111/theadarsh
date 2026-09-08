@@ -1,6 +1,3 @@
-import React from "react";
-import { FloatingDots } from "../ui/devsloka-ui/FloatingDots";
-import { useTheme } from "../theme-provider";
 import HeroSplitReveal from "../ui/devsloka-ui/HeroSplitReveal";
 import { cn } from "~/lib/utils";
 
