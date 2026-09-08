@@ -41,7 +41,7 @@ export function Footer() {
     {
       icon: Linkedin,
       label: "Linkedin",
-      href: "https://www.linkedin.com/in/adarsh-patel-111/",
+      href: "https://www.linkedin.com/in/adarsh-patel-5b219a376/",
     },
   ];
 
