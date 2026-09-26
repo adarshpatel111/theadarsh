@@ -1,4 +1,4 @@
-import { Code, Layers, Palette, Server } from "lucide-react";
+import { Code, Layers, Palette, Server, Terminal } from "lucide-react";
 
 // Pattern components remain the same
 const PurpleWaves = () => (
@@ -136,7 +136,7 @@ const GreenDots = () => (
             r="1.5"
             fill="#10b981"
           />
-        ))
+        )),
       )}
     </svg>
   </div>
@@ -214,11 +214,7 @@ export const projectsData = [
       "Created optimized filter algorithms",
       "Implemented Stripe with proper security measures",
     ],
-    screenshots: [
-      "/rgav1.png",
-      "/rgav-admin1.png",
-      "/rgav-admin1.png",
-    ],
+    screenshots: ["/rgav1.png", "/rgav-admin1.png", "/rgav-admin1.png"],
   },
   {
     id: "2",
@@ -371,12 +367,7 @@ export const projectsData = [
       "Used PDF libraries with Base64 handling",
       "Created wizard component with validation",
     ],
-    screenshots: [
-      "/bssp1.png",
-      "/bssp2.png",
-      "/bssp3.png",
-      "/bssp4.png",
-    ],
+    screenshots: ["/bssp1.png", "/bssp2.png", "/bssp3.png", "/bssp4.png"],
   },
   {
     id: "5",
@@ -425,20 +416,6 @@ export const projectsData = [
       "Strict token expiration policies",
     ],
   },
-  // {
-  //   id: "6",
-  //   icon: <Layers className="h-6 w-6 text-white" />,
-  //   iconBg: "bg-yellow-500",
-  //   date: "Nov 2024",
-  //   category: "Full Stack",
-  //   title: "CollabBros",
-  //   description:
-  //     "Real-time collaborative text editor with multiple language support.",
-  //   features: ["Coming soon - details to be provided"],
-  //   technologies: ["ReactJs", "TypeScript", "Firebase"],
-  //   liveUrl: "https://collabbros.vercel.app",
-  //   pattern: <YellowLines />,
-  // },
   {
     id: "6",
     icon: <Layers className="h-6 w-6 text-white" />,
@@ -504,10 +481,102 @@ export const projectsData = [
       "Developed conflict resolution algorithm",
       "Added offline support with sync-on-reconnect",
     ],
+    screenshots: ["/collabbros1.png", "/collabbros2.png", "/collabbros3.png"],
+  },
+  {
+    id: "7",
+    icon: <Terminal className="h-6 w-6 text-white" />,
+    iconBg: "bg-emerald-500",
+    date: "2026",
+    category: "AI Platform / Full Stack",
+    title: "Vidura AI",
+    description:
+      "Multi-provider AI chat workspace with BYOK support, streaming responses, and technical operator console UX.",
+    overview: [
+      "Built a provider-agnostic AI chat workspace supporting OpenAI, Anthropic, Google Gemini, and custom OpenAI-compatible endpoints",
+      "Implemented BYOK (Bring Your Own Key) architecture with AES-256-GCM server-side encryption",
+      "Designed a technical operator console UI with real-time streaming, reasoning traces, and code-first rendering",
+      "Added persistence for conversations, messages, attachments, and usage analytics with row-level security",
+    ],
+    features: [
+      "Multi-provider model picker (OpenAI, Anthropic, Gemini, DeepSeek, Groq, Mistral, xAI, OpenRouter)",
+      "Streaming responses with Server-Sent Events (SSE) and normalized event protocol",
+      "Regenerate assistant replies and edit user messages with history truncation",
+      "Full-text search across all messages with highlighted snippets",
+      "Per-conversation custom instructions (system prompt) merged with global profile prompt",
+      "Temperature and max-tokens controls per session",
+      "Image attachments with inline preview and lightbox",
+      "Per-chip retry for failed uploads",
+      "Public share links with password protection and revocation",
+      "Copy as Markdown, export as JSON, export as PDF",
+      "Pin, archive, rename, and delete conversations",
+      "Auto-titled conversations using heuristics",
+      "Global toast notifications and toast-driven feedback",
+      "Dark / light / system theme with no-flash pre-paint script",
+      "Email verification banner with resend flow",
+      "Change email flow with pending-verification state",
+      "Responsive mobile layout with safe-area support and visual-viewport awareness",
+      "Reasoning trace viewer for thinking models",
+      "Token usage tracking and monthly message limits",
+      "Grouped sidebar by Pinned / Today / Yesterday / Previous 7 days",
+    ],
+    technicalDetails: [
+      "Framework: Next.js 15 (App Router) with React 19",
+      "Language: TypeScript 5.6 (strict mode throughout)",
+      "Styling: Tailwind CSS v4 with design tokens via @theme",
+      "Backend: Next.js Route Handlers on the Edge/Node runtime",
+      "Database: Supabase Postgres with row-level security policies",
+      "Storage: Supabase Storage (attachments + avatars buckets with owner-scoped policies)",
+      "Auth: Supabase Auth with email verification and password reset",
+      "AI Gateway: Normalized provider abstraction with per-vendor adapters",
+      "Streaming: Server-Sent Events (SSE) with progressive token delivery",
+      "Encryption: AES-256-GCM for BYOK keys, scrypt for share passwords",
+      "Search: Postgres tsvector with GIN indexes on message content",
+      "CSRF: Double-submit cookie pattern with server-side validation",
+      "Animations: motion/react with reduced-motion support",
+      "Icons: Lucide + Material Symbols Outlined",
+      "Retry logic: Exponential backoff on transient 503 responses",
+      "Token counting: Streamed token estimator for usage events",
+    ],
+    technologies: [
+      "Next.js 15",
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS v4",
+      "Supabase",
+      "PostgreSQL",
+      "OpenAI API",
+      "Anthropic API",
+      "Google Gemini API",
+      "Server-Sent Events",
+      "Motion",
+      "Zod",
+    ],
+    liveUrl: "https://vidura-ai-seven.vercel.app/",
+    pattern: <YellowLines />,
+    challenges: [
+      "Normalizing wildly different provider protocols (OpenAI SSE, Anthropic events, Google chunks) into one client contract",
+      "Streaming responses where the abort must persist partial content and usage without double-writing",
+      "Preventing the composer from being covered by the mobile keyboard on iOS Safari",
+      "Modals, dropdowns, and portals fighting with each other's z-index across the app",
+      "Keeping BYOK API keys secure end-to-end with zero browser exposure",
+      "Rate limits and 503s from providers degrading the UX silently",
+      "Supabase schema evolution across migrations without breaking older sessions",
+    ],
+    solutions: [
+      "Built a provider gateway that reduces every upstream into a single normalized ProviderChunk shape, re-emitted as one SSE protocol",
+      "Used a persisted flag + abort listener + transform stream flush/cancel to save partial content exactly once",
+      "Tracked window.visualViewport and shifted the composer up by the keyboard inset with a CSS custom property",
+      "Rendered dropdowns into document.body via portals with fixed positioning computed from trigger bounding rects",
+      "Encrypted every BYOK key server-side with AES-256-GCM; decryption only happens in the resolveProvider step",
+      "Added exponential backoff on 503s and surfaced retry attempts as streamed events + toast notifications",
+      "Wrote idempotent SQL migrations with hasCode fallbacks and column-existence checks",
+    ],
     screenshots: [
-      "/collabbros1.png",
-      "/collabbros2.png",
-      "/collabbros3.png",
+      "/vidura-home.png",
+      "/vidura-chat.png",
+      "/vidura-settings.png",
+      "/vidura-models.png",
     ],
   },
 ];
