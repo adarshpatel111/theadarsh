@@ -552,7 +552,7 @@ export const projectsData = [
       "Motion",
       "Zod",
     ],
-    liveUrl: "https://vidura-ai-seven.vercel.app/",
+    liveUrl: "https://ai-vidura.vercel.app/",
     pattern: <YellowLines />,
     challenges: [
       "Normalizing wildly different provider protocols (OpenAI SSE, Anthropic events, Google chunks) into one client contract",
